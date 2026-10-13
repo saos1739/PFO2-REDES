@@ -20,7 +20,7 @@ Requisitos:
 * **SQLite3** para la base de datos (INCLUIDO CON PYTHON)
 * **Requests** El cliente http para la terminal
 
-# Instalaciones necesarias
+## Instalaciones necesarias
 
 En la consola, escribi los siguientes comandos para instalar las dependencias necesarias:
 
@@ -28,7 +28,7 @@ En la consola, escribi los siguientes comandos para instalar las dependencias ne
 * .venv\Scripts\Activate.ps1
 * pip install flask requests
 
-  ## Como ejecutarlo
+## Como ejecutarlo
 
 *1. En una terminal, inicia el servidor utilizando:
    ```
@@ -40,7 +40,7 @@ En la consola, escribi los siguientes comandos para instalar las dependencias ne
    ```
 
 
-## Endpoints
+# Endpoints
 | Metodo | Ruta | Descripcion | Body (JSON) |
 |---|---|---|---|
 | POST | `/registro` | Registra un usuario | `{"usuario": "Santiago", "contraseña": "1234"}` |
@@ -55,3 +55,54 @@ En la consola, escribi los siguientes comandos para instalar las dependencias ne
 
 
 # Pruebas exitosas
+
+## Pruebas con Postman
+
+### 1. Registro de usuario exitoso 
+![Registro exitoso](capturas/registro1.png)
+
+### 2. Contraseña hasheada en SQLite 
+![Contraseñas hasheadas](capturas/passHasheadas.png)
+
+### 3. Inicio de sesion 
+![Login exitoso](capturas/loginexitoso1.png)
+
+### 4. Vista de tareas
+![Vista de tareas](capturas/vistaTareas1.png)
+
+## Pruebas con la consola
+
+### 1. Menu
+![Menu](capturas/cliente.png)
+
+### 2. Registro de usuario
+![Registro desde el cliente](capturas/cliente-registroexistoso1.png)
+
+### 3. Inicio de sesion y acceso a tareas
+![Login desde el cliente](capturas/cliente-loginexitoso1.png)
+
+## Validacion de errores
+
+### Usuario ya registrado
+![Usuario repetido en Postman](capturas/usuarioexiste1.png)
+![Usuario repetido en el cliente](capturas/cliente-usuariorepetido.png)
+
+### Credenciales incorrectas 
+![Contraseña incorrecta](capturas/LOGINFALLIDO1.png)
+![Usuario inexistente](capturas/LOGINFALLIDO2.png)
+![Login fallido en el cliente](capturas/cliente-loginfallido1.png)
+
+
+
+# Preguntas conceptuales:
+
+## ¿Por qué hashear contraseñas?
+
+* Se Hashean las contraseñas porque no se deben guardar contraseñas en texto plano. Se aplica el script del hash y la contraseña se combierte en una cadena fija.
+
+* En caso de una vulnerabilidad en la base de datos y se filtraran las contraseñas, estas al estar hasheadas no correrian riesgo de quedar expuestas
+
+
+## Ventajas de usar SQLite en este proyecto
+
+* Las ventajas que se tienen al usar SQLite en este proyecto son que no se requiere instalar un servidor independiente como MySQL ya que se gestiona en un archivo local. Ademas viene previamente instalado en la bibloteca de Python
