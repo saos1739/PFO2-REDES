@@ -1,5 +1,7 @@
 # PFO 2 : Sistema de Gestion de tareas con API y Base de datos
 
+
+## Enlace al proyecto : https://saos1739.github.io/PFO2-REDES/
 Trabajo practico en el que se desarrolla una arquitectura cliente-servidor mediante una API Flask, cuenta con autenticacion
 con contraseñas Hasheadas y el almacenamiento persistente con SQLite
 
