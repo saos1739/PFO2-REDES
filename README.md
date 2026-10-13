@@ -98,11 +98,11 @@ En la consola, escribi los siguientes comandos para instalar las dependencias ne
 
 ## ¿Por qué hashear contraseñas?
 
-* Se Hashean las contraseñas porque no se deben guardar contraseñas en texto plano. Se aplica el script del hash y la contraseña se combierte en una cadena fija.
+* Se Hashean las contraseñas porque no se deben guardar contraseñas en texto plano. se aplica una función criptográfica de hash unidirecciona y la contraseña se comvierte en una cadena fija.
 
-* En caso de una vulnerabilidad en la base de datos y se filtraran las contraseñas, estas al estar hasheadas no correrian riesgo de quedar expuestas
+* En caso de una vulnerabilidad en la base de datos y se filtraran las contraseñas, estas al estar Hasheadas no correrian riesgo de quedar expuestas
 
 
 ## Ventajas de usar SQLite en este proyecto
 
-* Las ventajas que se tienen al usar SQLite en este proyecto son que no se requiere instalar un servidor independiente como MySQL ya que se gestiona en un archivo local. Ademas viene previamente instalado en la bibloteca de Python
+* Las ventajas que se tienen al usar SQLite en este proyecto son que no se requiere instalar un servidor independiente como MySQL ya que se gestiona en un archivo local. Ademas viene previamente instalado en la biblioteca de Python
